@@ -1,0 +1,6 @@
+site: brxm-okta
+group: brxm-okta
+project: brxm-okta
+module:
+  name: brxm-okta-repository-data-site-development
+  after: brxm-okta-repository-data-site

@@ -1,0 +1,7 @@
+group: 
+  name: brxm-okta
+  after: hippo-cms
+project: brxm-okta
+module: 
+  name: brxm-okta-repository-data-development
+  after: brxm-okta-repository-data-application

@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    brxmokta:
+      uri: http://www.brxmokta.com/brxmokta/nt/1.0
+      cnd: namespaces/brxm-okta.cnd

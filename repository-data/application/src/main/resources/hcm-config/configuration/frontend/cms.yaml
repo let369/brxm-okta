@@ -1,0 +1,4 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/cms-services/logoutService:
+      plugin.class: org.example.sso.SSOLogout
