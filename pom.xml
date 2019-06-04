@@ -59,6 +59,7 @@
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
+    <spring-security.version>${spring.version}</spring-security.version>
     <spring-security-saml.version>1.0.9.RELEASE</spring-security-saml.version>
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
