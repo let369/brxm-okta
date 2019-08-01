@@ -22,3 +22,9 @@ definitions:
         operation: add
         type: string
         value: [editor]
+    /hippo:configuration/hippo:groups/admin:
+      hipposys:members:
+        operation: add
+        type: string
+        value: [lef.karamoulas@bloomreach.com]
+

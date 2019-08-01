@@ -1,0 +1,11 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:users/lef.karamoulas@bloomreach.com:
+      jcr:primaryType: hipposys:externaluser
+      firstname: Test
+      hipposys:active: true
+      hipposys:lastsync: 2019-05-20T16:19:21.976+01:00
+      hipposys:securityprovider: sso
+      lastname: Test
+      ldapui: lef.karamoulas@bloomreach.com
+      hipposys:lastlogin: 2019-08-01T15:14:54.017+02:00

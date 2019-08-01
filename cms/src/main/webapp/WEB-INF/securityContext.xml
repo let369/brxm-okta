@@ -67,6 +67,9 @@
 
     <!-- Secured pages with SAML as entry point -->
     <security:http entry-point-ref="samlEntryPoint" use-expressions="false">
+        <security:headers>
+            <security:frame-options policy="SAMEORIGIN"/>
+        </security:headers>
         <security:intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY"/>
         <security:custom-filter before="FIRST" ref="metadataGeneratorFilter"/>
         <security:custom-filter after="BASIC_AUTH_FILTER" ref="samlFilter"/>
@@ -182,9 +185,29 @@
                         </bean>
                     </constructor-arg>
                 </bean>
+                <!-- Example of HTTP metadata with Extended Metadata -->
+                <!--<bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">-->
+                    <!--<constructor-arg>-->
+                        <!--<bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">-->
+                            <!--<constructor-arg>-->
+                                <!--<value type="java.lang.String">${saml.idpUrl}</value>-->
+                            <!--</constructor-arg>-->
+                            <!--<constructor-arg>-->
+                                <!--&lt;!&ndash; Timeout for metadata loading in ms &ndash;&gt;-->
+                                <!--<value type="int">5000</value>-->
+                            <!--</constructor-arg>-->
+                            <!--<property name="parserPool" ref="parserPool"/>-->
+                        <!--</bean>-->
+                    <!--</constructor-arg>-->
+                    <!--<constructor-arg>-->
+                        <!--<bean class="org.springframework.security.saml.metadata.ExtendedMetadata"/>-->
+                    <!--</constructor-arg>-->
+                <!--</bean>-->
             </list>
         </constructor-arg>
     </bean>
+
+    <!--<bean class="org.springframework.security.saml.trust.httpclient.TLSProtocolConfigurer"/>-->
 
     <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
     <bean id="samlAuthenticationProvider" class="org.springframework.security.saml.SAMLAuthenticationProvider">
