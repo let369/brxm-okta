@@ -12,6 +12,8 @@
   <name>brXM Okta CMS Dependencies</name>
   <description>brXM Okta CMS Dependencies</description>
   <dependencies>
+
+    <!-- SAML dependencies-->
     <dependency>
       <groupId>org.springframework.security.extensions</groupId>
       <artifactId>spring-security-saml2-core</artifactId>
@@ -21,7 +23,7 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
-      <version>${spring-security.version}</version>
+      <version>${spring.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.springframework</groupId>
@@ -49,7 +51,7 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
-      <version>${spring-security.version}</version>
+      <version>${spring.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.springframework</groupId>
@@ -77,7 +79,7 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-config</artifactId>
-      <version>${spring-security.version}</version>
+      <version>${spring.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.springframework</groupId>
@@ -101,7 +103,7 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-taglibs</artifactId>
-      <version>${spring-security.version}</version>
+      <version>${spring.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.springframework</groupId>
@@ -137,6 +139,7 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <!-- SAML dependencies-->
 
     <dependency>
       <groupId>org.example</groupId>
