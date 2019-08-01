@@ -13,7 +13,7 @@
     <context:component-scan base-package="org.springframework.security.saml"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:saml/saml.properties"/>
+        <property name="location" value="#{systemProperties['saml.conf']}"/>
         <!-- IGNORE if not found, otherwise exception is thrown-->
         <property name="ignoreResourceNotFound" value="true"/>
         <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
